@@ -1,0 +1,52 @@
+<ion-content class="bg">
+
+  <ion-card>
+    <ion-card-header>
+      Mi selección
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>País</ion-label>
+        <ion-select [(ngModel)]="favorito">
+          <ion-option value="CO">Colombia</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Recibirás notificaciones
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-checkbox checked="true"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Notificaciones Push en tiempo real</ion-label>
+        <ion-checkbox checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Quiero registrarme y ganar fabulosos premios!
+    </ion-card-header>
+
+    <ion-list inset>
+      <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-input type="text" placeholder="nombre@correo.com"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <p padding>
+      <button ion-button block outline color="secondary">Aceptar</button>
+      <span>* No enviamos SPAM ni compartimos tu información</span>
+    </p>
+  </ion-card>
+
+</ion-content>

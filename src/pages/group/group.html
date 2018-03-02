@@ -1,0 +1,24 @@
+<ion-content class="bg">
+
+	<ion-card>
+		<ion-card-content style="text-align:center">
+			<h3>Simple y super rápido! Solo con tu e-mail</h3>
+			<h1>Participa en la Quiniela</h1>
+			<h4>
+				Ve a Ajustes > Suscripción por correo
+			</h4>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card *ngFor="let item of [1,2,3,4,5,6,7,8]">
+		<ion-card-header>
+			Grupo A
+		</ion-card-header>
+		<ion-list reorder="true">
+			<ion-item *ngFor="let item of [1,2,3,4]">
+				<ion-label>Rusia</ion-label>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+</ion-content>
