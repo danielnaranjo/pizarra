@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { HttpModule } from '@angular/http';
+import { Network } from '@ionic-native/network';
+
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/observable/timer'
 import 'rxjs/add/operator/map'

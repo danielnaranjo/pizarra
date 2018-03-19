@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
-//import 'rxjs/add/operator/map';
-//import { Http } from '@angular/http';
+import { ModalController, NavController, NavParams, ToastController, Platform } from 'ionic-angular';
+import { Http } from '@angular/http';
+import { DatePipe } from '@angular/common';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'page-group',
@@ -9,22 +10,17 @@ import { NavController, ToastController } from 'ionic-angular';
 })
 export class GroupPage {
 
-  //ga: Array<0>;
-  //seleccion_a: any;
+
   data: any;
 
-//, public http: Http
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
-    /*
-    this.ga = this.ga;
-    this.seleccion_a = 1;
+    constructor(public navCtrl: NavController, public modalCtrl: ModalController, public http: Http, public toastCtrl: ToastController) {
 
-    this.http.get('https://app.tuconsorcio.com.ar/api/v2/alertas/12')
-      .map(res => res.json()).subscribe(data => {
-        this.data = data.results;
-        console.log('data', this.data);
-      });
-*/
+    this.http.get('https://raw.githubusercontent.com/lsv/fifa-worldcup-2018/master/data.json')
+        .map(res => res.json()).subscribe(data => {
+            this.data = data.groups.a.matches;
+            console.log('data', this.data);
+        });
+
   }
 
   seleccionado(grupo, equipo) {

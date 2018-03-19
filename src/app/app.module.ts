@@ -2,6 +2,9 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp, FormatTimePipe } from './app.component';
+import { HttpModule } from '@angular/http';
+import { DatePipe } from '@angular/common';
+
 
 import { CountryPage } from '../pages/countries/countries';
 import { SettingPage } from '../pages/settings/settings';
@@ -23,6 +26,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

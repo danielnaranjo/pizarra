@@ -9,7 +9,7 @@
       <ion-item>
         <ion-label>País</ion-label>
         <ion-select [(ngModel)]="favorito">
-          <ion-option value="CO">Colombia</ion-option>
+          <ion-option *ngFor="let d of data" value="{{ d.name }}">{{ d.name }}</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
